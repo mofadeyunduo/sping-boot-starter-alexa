@@ -44,6 +44,8 @@ public class HelloWorldSpeechlet implements SpeechletV2 {
 
     @Override
     public SpeechletResponse onIntent(SpeechletRequestEnvelope<IntentRequest> requestEnvelope) {
+        requestEnvelope.getSession().getUser().getAccessToken();
+
         IntentRequest request = requestEnvelope.getRequest();
         log.info("onIntent requestId={}, sessionId={}", request.getRequestId(),
                 requestEnvelope.getSession().getSessionId());

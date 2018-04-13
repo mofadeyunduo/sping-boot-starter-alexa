@@ -10,10 +10,10 @@ import per.piers.alexa.helloworld.HelloWorldSpeechlet;
 public class AlexaConfiguration {
 
     @Bean
-    public ServletRegistrationBean<SpeechletServlet> registration() {
+    public ServletRegistrationBean registration() {
         SpeechletServlet speechletServlet = new SpeechletServlet();
         speechletServlet.setSpeechlet(new HelloWorldSpeechlet());
-        return new ServletRegistrationBean<>(speechletServlet, "/alexa");
+        return new ServletRegistrationBean(speechletServlet, "/alexa");
     }
 
 }

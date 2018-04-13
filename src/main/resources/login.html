@@ -1,0 +1,47 @@
+<html>
+<head></head>
+<body>
+<div>
+    <label>username:</label>
+    <input type="text" id="username">
+</div>
+<div>
+    <label>password:</label>
+    <input type="text" id="password">
+</div>
+<div>
+    <button type="submit" value="submit" onclick="login()">login</button>
+</div>
+<script>
+    function login() {
+        var data = {
+            "username": document.getElementById("username").value,
+            "password": document.getElementById("password").value
+        };
+        var request = new XMLHttpRequest();
+        request.open("POST", "/alexa/login?" + getUrlPara().toString(), true);
+        request.setRequestHeader("Content-type", "application/json;charset=utf-8");
+        request.send(JSON.stringify(data));
+        request.onreadystatechange = function () {
+            if (request.readyState == 4 && request.status == 200) {
+                var map = JSON.parse(request.response);
+                console.log(map);
+                var first = "?";
+                if (map.redirect.indexOf("?") != -1) {
+                    first = "&";
+                }
+                window.location.href = map.redirect + first + "code=" + map.code + "&state=" + map.state;
+            }
+        }
+    }
+
+    function getUrlPara() {
+        var url = document.location.toString();
+        var arrUrl = url.split("?");
+
+        var para = arrUrl[1];
+        return para;
+    }
+</script>
+</body>
+</html>
