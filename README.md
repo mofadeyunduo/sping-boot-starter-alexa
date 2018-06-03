@@ -1,7 +1,12 @@
-# spring-boot-starter-alexa
+# Spring Boot Starter Alexa
 
-Alexa integrated with Spring Boot, Spring Security and Spring OAuth2 For Amazon account link.
+## Description 
 
-# configuration
+- Alexa integrated with Spring Boot
+- Using Strategy and Abstract Factory Design Pattern
 
-TDB.
+# Usage
+
+- Change servlet mapping in AlxeaConfiguration
+- Implement AbstractSpeechlet and mark as @Service(and remove DefaultSpeechlet), handle common Alexa business
+- Implement IntentResponseProvider, handle Alexa Intent
