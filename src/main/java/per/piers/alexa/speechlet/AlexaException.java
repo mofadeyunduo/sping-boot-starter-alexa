@@ -1,4 +1,4 @@
-package com.petkit.alexa.speechlet;
+package per.piers.alexa.speechlet;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;

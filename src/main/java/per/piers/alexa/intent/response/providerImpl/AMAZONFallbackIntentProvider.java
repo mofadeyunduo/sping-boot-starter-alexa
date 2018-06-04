@@ -1,15 +1,15 @@
-package com.petkit.alexa.intent.response.providerImpl;
+package per.piers.alexa.intent.response.providerImpl;
 
 import com.amazon.speech.json.SpeechletRequestEnvelope;
 import com.amazon.speech.speechlet.IntentRequest;
 import com.amazon.speech.speechlet.SpeechletResponse;
 import com.amazon.speech.ui.PlainTextOutputSpeech;
-import com.petkit.alexa.intent.response.provider.IntentResponseProvider;
-import com.petkit.alexa.speechlet.AlexaException;
+import per.piers.alexa.intent.response.provider.IntentResponseProvider;
+import per.piers.alexa.speechlet.AlexaException;
 import org.springframework.stereotype.Service;
 
-@Service("AMAZON.HelpIntent")
-public class AMAZONHelpIntentProvider implements IntentResponseProvider {
+@Service("AMAZON.FallbackIntent")
+public class AMAZONFallbackIntentProvider implements IntentResponseProvider {
 
     @Override
     public SpeechletResponse getSpeechletResponse(SpeechletRequestEnvelope<IntentRequest> env) {

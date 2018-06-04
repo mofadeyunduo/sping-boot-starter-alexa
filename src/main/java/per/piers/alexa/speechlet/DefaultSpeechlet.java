@@ -1,4 +1,4 @@
-package com.petkit.alexa.speechlet;
+package per.piers.alexa.speechlet;
 
 import com.amazon.speech.json.SpeechletRequestEnvelope;
 import com.amazon.speech.speechlet.*;

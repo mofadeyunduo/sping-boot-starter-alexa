@@ -1,27 +1,27 @@
-package com.petkit.alexa.intent.response.providerImpl;
+package per.piers.alexa.intent.response.providerImpl;
 
 import com.amazon.speech.json.SpeechletRequestEnvelope;
 import com.amazon.speech.speechlet.IntentRequest;
 import com.amazon.speech.speechlet.SpeechletResponse;
 import com.amazon.speech.ui.PlainTextOutputSpeech;
-import com.petkit.alexa.intent.response.provider.IntentResponseProvider;
-import com.petkit.alexa.speechlet.AlexaException;
+import per.piers.alexa.intent.response.provider.IntentResponseProvider;
+import per.piers.alexa.speechlet.AlexaException;
 import org.springframework.stereotype.Service;
 
-@Service("helloworld")
-public class HelloWorldIntentProvider implements IntentResponseProvider {
+@Service("AMAZON.CancelIntent")
+public class AMAZONCancelIntentProvider implements IntentResponseProvider {
 
     @Override
     public SpeechletResponse getSpeechletResponse(SpeechletRequestEnvelope<IntentRequest> env) {
         PlainTextOutputSpeech speech = new PlainTextOutputSpeech();
-        speech.setText("Hello World");
+        speech.setText("OK");
         return SpeechletResponse.newTellResponse(speech);
     }
 
     @Override
     public SpeechletResponse getAlexaExceptionResponse(SpeechletRequestEnvelope<IntentRequest> env, AlexaException e) {
         PlainTextOutputSpeech speech = new PlainTextOutputSpeech();
-        speech.setText("Hello Error");
+        speech.setText("Sorry");
         return SpeechletResponse.newTellResponse(speech);
     }
 

@@ -1,4 +1,4 @@
-package com.petkit.alexa;
+package per.piers.alexa;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

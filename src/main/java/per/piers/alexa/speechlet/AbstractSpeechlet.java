@@ -1,10 +1,10 @@
-package com.petkit.alexa.speechlet;
+package per.piers.alexa.speechlet;
 
 import com.amazon.speech.json.SpeechletRequestEnvelope;
 import com.amazon.speech.speechlet.IntentRequest;
 import com.amazon.speech.speechlet.SpeechletResponse;
 import com.amazon.speech.speechlet.SpeechletV2;
-import com.petkit.alexa.intent.response.provider.IntentResponseProvider;
+import per.piers.alexa.intent.response.provider.IntentResponseProvider;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.BeansException;
